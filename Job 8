@@ -1,6 +1,12 @@
-#!/bin/bash
+# ./bin/bash
 
-sudo apt remove proftpd*
-sudo apt autoremove proftpd*
-sudo apt purge proftpd*
-sudo apt remove filezilla
+#We assume that user is root
+
+#Removing all installations
+apt remove proftpd-doc
+apt remove proftpd-basic
+echo "Proftpd has been removed"
+
+#Removing all extra files
+rm -r /etc/proftpd/
+echo "PC is now clean from all installations"
